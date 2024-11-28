@@ -30,7 +30,7 @@ export default function Home() {
         {
           data.map((item, index) => {
             return (
-              <FM_Reveal>
+              <FM_Reveal key={index}>
                 <div key={index} className="w-[50vw] h-[200px] bg-indigo-400 flex justify-center items-center rounded-lg shadow-2xl shadow-zinc-500">
                   <p className="text-3xl">{item.title}</p>          
                 </div>
