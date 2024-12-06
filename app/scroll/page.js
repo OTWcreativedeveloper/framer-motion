@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef, useState } from "react";
-import {motion,useInView,useAnimation} from 'framer-motion';
-
+import {motion,useInView,useAnimation,useScroll,useMotionValueEvent,useTransform} from 'framer-motion';
+//! SOURCE YOUTUBE = https://www.youtube.com/watch?v=PczQ0qSwe1E&list=PLA4qBVt61k3Phpwt7uqaptIg9NYZ5aNu_&index=8
 
 
 const WhileInView = () => {
@@ -143,22 +143,16 @@ const UseScrollWithContainer = () => {
 const ScrollAnimations = () => {
     return (
         
-        <div className="bg-zinc-950 text-zinc-50">
-            <div className="relative z-10">
+        <div className="">
+            <div className="">
                 <div className="h-[150vh]" />
                 {/* <WhileInView /> */}
-                <UseInView />
+                {/* <UseInView /> */}
                 {/* <UseScrollBasic /> */}
                 {/* <UseScrollAdvanced /> */}
-                {/* <UseScrollWithContainer /> */}
+                <UseScrollWithContainer />
                 <div className="h-[150vh]" />
             </div>
-            <div
-                style={{
-                    backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke-width='2' stroke='%2318181b'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
-                }}
-                className="fixed inset-0"
-            />
         </div>  
        
     )

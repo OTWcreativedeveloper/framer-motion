@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef, useState } from "react";
 import {motion,useInView,useAnimation} from 'framer-motion';
-
+//! source YOUTUBE = https://www.youtube.com/watch?v=hjbxaYTMhy0&list=PLA4qBVt61k3Phpwt7uqaptIg9NYZ5aNu_
 const FM_Reveal = ({children}) => {
 
     const ref = useRef(null);

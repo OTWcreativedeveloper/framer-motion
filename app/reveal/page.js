@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import {motion,useInView,useAnimation} from 'framer-motion';
 import FM_Reveal from "@/utils/FM_Reveal";
-
+//! source YOUTUBE = https://www.youtube.com/watch?v=hjbxaYTMhy0&list=PLA4qBVt61k3Phpwt7uqaptIg9NYZ5aNu_
 export default function Home() {
   const [data,setData] = useState([]);
   const [loading,setLoading] = useState(false);
