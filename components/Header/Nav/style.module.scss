@@ -17,7 +17,13 @@
         a{
             text-decoration: none;
             color: black;
-            font-size: 46px;
+            // // font-size: 46px; ORIGINAL
+            @media (max-width: 480px) {
+                font-size: 23px;
+            }
+            @media (min-width: 480px) {
+                font-size: 50px;
+            }
         }
     }
     .footer{
