@@ -9,7 +9,7 @@ import Nav from './Nav';
 
 export default function Index() {
     const [isActive, setIsActive] = useState(false);
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState(0);
     const menu = {
         open: {
             width: width > 480 ? "480px" : "250px",
@@ -27,9 +27,14 @@ export default function Index() {
         }
     }
     useEffect(() => {
-      const handleResize = () => setWidth(window.innerWidth);
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
+        if (typeof window !== "undefined") {
+            // Set the initial width
+            setWidth(window.innerWidth);
+
+            const handleResize = () => setWidth(window.innerWidth);
+            window.addEventListener("resize", handleResize);
+            return () => window.removeEventListener("resize", handleResize);
+        }
     }, []);
     return (
         <div className={styles.header}>
